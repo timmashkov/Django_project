@@ -21,5 +21,8 @@ from stormrage.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('stormrage/', include('stormrage.urls')),
+    path('', include('stormrage.urls')),
 ]
+
+
+handler404 = pageNotFound
