@@ -3,6 +3,6 @@ from .views import *
 
 
 urlpatterns = [
-    path('', index),
-    path('stormrage/<slug:ind>/', showing)
+    path('home/', index, name='home'),
+    path('stormrage/<slug:ind>/', showing),
 ]
