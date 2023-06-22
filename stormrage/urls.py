@@ -4,5 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('home/', index, name='home'),
-    path('stormrage/<slug:ind>/', showing),
+    path('stormrage/<int:ind>/', showing),
 ]
