@@ -18,5 +18,13 @@ def showing(request, ind):
 # Create your views here.
 
 
+def alter_page(request):
+    if request.GET:
+        print(request.GET)
+    else:
+        print('Sorry, theres nothing')
+    return HttpResponse(f'<h1>Alternative page, just testing django views, never mind</h1>')
+
+
 def pageNotFound(request, exception):
     return HttpResponseNotFound(f'<h1>Page not found cause, deal with it</h1>')
