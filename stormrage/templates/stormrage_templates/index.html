@@ -1,15 +1,16 @@
 {% extends 'stormrage_templates/based_page.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
-<ul>
-    {% for i in intel %}
-    <li>
-        <h2>{{i.title}}</h2>
-        <p>{{i.content}}</p>
-        <hr>
-    </li>
-    {% endfor %}
+<ul class="list-articles">
+	{% for p in intel %}
+			<li><h2>{{p.title}}</h2>
+	{% autoescape on %}
+	{{p.content|linebreaks|truncatewords:500}}
+	{% endautoescape %}
+			<div class="clear"></div>
+			<p class="link-read-post"><a href="#">Read data</a></p>
+			</li>
+	{% endfor %}
 </ul>
 
 {% endblock %}
