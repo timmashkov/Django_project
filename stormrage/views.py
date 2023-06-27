@@ -1,5 +1,9 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
+from .models import *
+
+
+menu = ['About', 'Add an article', 'Feedback', 'Login']
 
 
 def index(request):
@@ -31,8 +35,13 @@ def alter_page(request):
 
 
 def welcome(request):
-    """Функция представление для домашней страницы"""
-    return render(request, '')
+    """Функция представление для домашней страницы с html скриптом"""
+    intel = Alpha.objects.all()
+    return render(request, 'stormrage_templates/index.html', {'intel': intel, 'menu': menu, 'title': 'The Alpha Tempest main page'})
+
+
+def show_info(request):
+    return render(request, 'stormrage_templates/info.html', {'menu': menu, 'title': 'All the intel you have to know'})
 
 
 def PageNotFound(request, exception):

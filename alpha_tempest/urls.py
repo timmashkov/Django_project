@@ -24,6 +24,7 @@ from stormrage.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome),
+    path('info/', show_info, name='info'),
     path('', include('stormrage.urls')),
 ]
 

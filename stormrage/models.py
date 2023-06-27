@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Alpha(models.Model):
+    objects = None
     title = models.CharField(max_length=255)
     content = models.TextField(blank=False)
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/")
