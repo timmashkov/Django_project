@@ -23,6 +23,7 @@ from stormrage.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', welcome),
     path('', include('stormrage.urls')),
 ]
 
@@ -30,4 +31,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = pageNotFound
+handler404 = PageNotFound
