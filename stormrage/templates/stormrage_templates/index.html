@@ -8,7 +8,7 @@
 	{{p.content|linebreaks|truncatewords:500}}
 	{% endautoescape %}
 			<div class="clear"></div>
-			<p class="link-read-post"><a href="#">Read data</a></p>
+			<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Read data</a></p>
 			</li>
 	{% endfor %}
 </ul>

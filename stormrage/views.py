@@ -2,7 +2,6 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
 from .models import *
 
-
 menu = [{'title': 'About', 'url_name': 'about'},
         {'title': 'Add an article', 'url_name': 'add_page'},
         {'title': 'Feedback', 'url_name': 'contact'},
@@ -16,11 +15,16 @@ def index(request):
 def welcome(request):
     """Функция представление для домашней страницы с html скриптом"""
     intel = Alpha.objects.all()
+    cats = Fraction.objects.all()
+
     context = {
         'intel': intel,
+        'cats': cats,
         'menu': menu,
-        'title': 'The Alpha Tempest main page'
+        'title': 'The Alpha Tempest main page',
+        'cat_selected': 0
     }
+
     return render(request, 'stormrage_templates/index.html', context=context)
 
 
@@ -46,3 +50,11 @@ def contact(request):
 
 def login(request):
     return HttpResponse('Login your account')
+
+
+def read_data(request, post_id):
+    return HttpResponse(f'Read about this id={post_id}')
+
+
+def show_fraction(request, cat_id):
+    return HttpResponse(f'Showing the fraction: {cat_id}')
