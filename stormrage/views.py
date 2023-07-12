@@ -5,7 +5,7 @@ from .models import *
 menu = [{'title': 'About', 'url_name': 'about'},
         {'title': 'Add an article', 'url_name': 'add_page'},
         {'title': 'Feedback', 'url_name': 'contact'},
-        {'title': 'Login', 'url_name': 'login'}]
+        {'title': 'Login', 'url_name': 'login'},]
 
 
 def index(request):
@@ -49,7 +49,7 @@ def contact(request):
 
 
 def login(request):
-    return HttpResponse('Login your account')
+    return redirect('add_page')
 
 
 def read_data(request, post_id):
@@ -69,3 +69,6 @@ def show_fraction(request, cat_id):
     }
 
     return render(request, 'stormrage_templates/index.html', context=context)
+
+
+
