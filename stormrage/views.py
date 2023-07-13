@@ -40,8 +40,10 @@ def about(request):
     return HttpResponse('The intel about this site')
 
 
+add_page_options = ['Add a page', 'Show all the data']
 def add_page(request):
-    return HttpResponse('Add a page')
+    return render(request, 'stormrage_templates/add_page.html',
+                  {'options': add_page_options, 'title': 'Add a page'})
 
 
 def contact(request):
