@@ -61,7 +61,6 @@ def read_data(request, post_id):
 def show_fraction(request, cat_id):
     intel = Alpha.objects.filter(cat_id=cat_id)
     cats = Fraction.objects.all()
-
     context = {
         'intel': intel,
         'cats': cats,
@@ -69,7 +68,6 @@ def show_fraction(request, cat_id):
         'title': 'Fraction site',
         'cat_selected': 0
     }
-
     return render(request, 'stormrage_templates/index.html', context=context)
 
 
