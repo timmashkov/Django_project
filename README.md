@@ -20,4 +20,5 @@ And i just started to do another pages, like this
 I decided to change main page color to black, just to understand how css works
 ![image](https://github.com/timmashkov/Django_project/assets/106866033/f63a897c-45c2-4395-a0f6-ff98d3acaeb5)
 Changed the main page logo and added a link to my github
+
 ![image](https://github.com/timmashkov/Django_project/assets/106866033/138db2c0-5257-4a40-aca5-e300153f1e9b)
