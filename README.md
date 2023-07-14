@@ -15,5 +15,7 @@ I made an admin panel, improved the way it works with DB
 ![image](https://github.com/timmashkov/Django_project/assets/106866033/5d98d8b3-ff5b-4582-b9f8-afc33a7c515b)
 I worked with templates, it looks the same, but i did some magic inside)
 ![image](https://github.com/timmashkov/Django_project/assets/106866033/d14271ac-b893-4bde-99b0-b708d7005d59)
-And i just started to do another pages? like this
+And i just started to do another pages, like this
 ![image](https://github.com/timmashkov/Django_project/assets/106866033/117cf2b8-f318-40e5-97fd-52dec0e28db1)
+I decided to change main page color to black, just to understand how css works
+![image](https://github.com/timmashkov/Django_project/assets/106866033/f63a897c-45c2-4395-a0f6-ff98d3acaeb5)
