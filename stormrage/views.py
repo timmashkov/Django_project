@@ -46,12 +46,13 @@ def add_page(request):
                   {'options': add_page_options, 'title': 'Add a page'})
 
 
+authors = ['Timur Mashkov', 'His desire to study', 'Friends support']
 def contact(request):
-    return HttpResponse('Get a feedback')
+    return render(request, 'stormrage_templates/contact.html', {'credits': authors})
 
 
 def login(request):
-    return redirect('add_page')
+    raise Http404('Sorry, no content available')
 
 
 def read_data(request, post_id):
