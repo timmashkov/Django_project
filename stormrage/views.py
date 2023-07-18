@@ -37,7 +37,7 @@ def PageNotFound(request, exception):
 
 
 def about(request):
-    return HttpResponse('The intel about this site')
+    return render(request, 'stormrage_templates/about.html')
 
 
 add_page_options = ['Add a page', 'Show all the data']
