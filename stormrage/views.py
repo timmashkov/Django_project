@@ -15,11 +15,9 @@ def index(request):
 def welcome(request):
     """Функция представление для домашней страницы с html скриптом"""
     intel = Alpha.objects.all()
-    cats = Fraction.objects.all()
 
     context = {
         'intel': intel,
-        'cats': cats,
         'menu': menu,
         'title': 'The Alpha Tempest main page',
         'cat_selected': 0
@@ -61,10 +59,8 @@ def read_data(request, post_id):
 
 def show_fraction(request, cat_id):
     intel = Alpha.objects.filter(cat_id=cat_id)
-    cats = Fraction.objects.all()
     context = {
         'intel': intel,
-        'cats': cats,
         'menu': menu,
         'title': 'Fraction site',
         'cat_selected': 0
